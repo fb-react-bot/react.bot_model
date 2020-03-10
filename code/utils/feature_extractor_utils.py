@@ -65,7 +65,7 @@ def get_spectral_bandwidth(y, sr, n_fft_rate, hop_length_rate):
     spectral_bandwidth = librosa.feature.spectral_bandwidth(y, sr, n_fft=n_fft, hop_length=hop_length)
     return spectral_bandwidth
 
-def feature_generator(wav_file_dir, sampling_rate, n_fft_rate, hop_length_rate, max_length):
+def feature_generator(wav_file_dir, sampling_rate=16000, n_fft_rate=0.2, hop_length_rate=0.1, max_length=78):
     # load
     y, sr = load_wav(wav_file_dir, sampling_rate)
     
